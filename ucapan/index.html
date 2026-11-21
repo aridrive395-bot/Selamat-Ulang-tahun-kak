@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Little Book of Memories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="terkunci">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bunga" viewBox="0 0 60 120">
+    <path d="M30 118C28 80 34 50 30 18" stroke="#6b8e9b" stroke-width="2" fill="none"/>
+    <ellipse cx="20" cy="80" rx="10" ry="4" transform="rotate(-35 20 80)" fill="#8fb5bd" opacity=".8"/>
+    <ellipse cx="41" cy="62" rx="10" ry="4" transform="rotate(35 41 62)" fill="#8fb5bd" opacity=".8"/>
+    <g fill="#9fc5e8"><circle cx="30" cy="14" r="8"/><circle cx="20" cy="26" r="6"/><circle cx="40" cy="30" r="6"/></g>
+    <g fill="#cfe3f5"><circle cx="30" cy="14" r="3"/><circle cx="20" cy="26" r="2.4"/><circle cx="40" cy="30" r="2.4"/></g>
+  </symbol>
+  <symbol id="kembang" viewBox="0 0 60 60">
+    <g fill="#f6fafe" stroke="#b5cde3" stroke-width="1.2"><ellipse cx="30" cy="14" rx="7" ry="13"/><ellipse cx="30" cy="14" rx="7" ry="13" transform="rotate(60 30 30)"/><ellipse cx="30" cy="14" rx="7" ry="13" transform="rotate(120 30 30)"/><ellipse cx="30" cy="14" rx="7" ry="13" transform="rotate(180 30 30)"/><ellipse cx="30" cy="14" rx="7" ry="13" transform="rotate(240 30 30)"/><ellipse cx="30" cy="14" rx="7" ry="13" transform="rotate(300 30 30)"/></g>
+    <circle cx="30" cy="30" r="6" fill="#9fc5e8"/>
+  </symbol>
+  <symbol id="bintang" viewBox="0 0 24 24"><path d="M12 2l2.6 7.2L22 10l-6 4.6L18 22l-6-4.3L6 22l2-7.4L2 10l7.4-.8z" fill="none" stroke="#5b7fa6" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+  <symbol id="hati" viewBox="0 0 24 24"><path d="M12 21C5 15 2 11.5 2 8a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 3.5-3 7-10 13z" fill="#9fc5e8"/></symbol>
+  <symbol id="coret" viewBox="0 0 200 12"><path d="M2 7C40 1 70 11 110 5S170 3 198 7" fill="none" stroke="#6fa3d4" stroke-width="2.4" stroke-linecap="round"/></symbol>
+</svg>
+<div id="kelopak" aria-hidden="true"></div>
+
+<!-- ===== SAMPUL ===== -->
+<div id="sampul">
+  <div class="buku">
+    <div class="spiral"></div><i class="karet"></i>
+    <div class="label">
+      <i class="pita-buku"></i><i class="washi w1"></i>
+      <svg class="ikon goyang"><use href="#bunga"/></svg>
+      <p class="kecil">A little archive of us</p>
+      <h1> Little Book of Memories</h1>
+      <!-- GANTI: tanggal sampul -->
+      <p class="tgl">22 November 2026</p>
+      <button id="bukaSurat" type="button">Open This Letter</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BUKU: setiap section.pg = satu halaman ===== -->
+<div id="stage">
+
+<!-- 1. Introduction -->
+<section class="pg" id="p-intro" data-t="dream" data-j="Introduction"><div class="isi mid">
+  <div class="catatan an"><i class="washi w2"></i><i class="klip"></i>
+    <!-- GANTI: pesan pembuka -->
+    <h2 class="besar">Hai,Kak </h2><svg class="coret"><use href="#coret"/></svg>
+    <p class="tulis ketik">Kalau kamu lagi baca ini berarti hasil aku ngoding ga sia sia :) and happy birth day kak aku harap kamu baca dan lihat sampe akhir </p>
+    <p class="tulis ketik">Ini bukan apa-apa kok. cuman buku kecil untuk menyimpan hal-hal baik yang pernah ada di antara kita.</p>
+    <p class="tulis ttd ketik">pelan-pelan ajaa bacanya ♡</p>
+    <svg class="kembang-s goyang"><use href="#kembang"/></svg>
+  </div>
+  <p class="kecil an" style="--i:8">tekan › atau geser layar untuk membalik halaman</p>
+</div></section>
+
+<!-- 2. Daftar Isi -->
+<section class="pg" id="p-isi" data-t="slide" data-j="Daftar Isi"><div class="isi mid">
+  <div class="kartu-isi an"><i class="tape"></i>
+    <h2 class="judul">Daftar Isi</h2><p class="sub">ketuk judul untuk melompat ke halamannya</p>
+    <ol class="toc" id="toc"></ol>
+  </div>
+</div></section>
+
+<!-- 3. Perjalanan -->
+<section class="pg" id="p-jalan" data-t="slide" data-j="flashback "><div class="isi">
+  <h2 class="judul an">sedikitflash back Perjalanan Kita</h2><p class="sub an">beberapa titik yang kuingat</p>
+  <!-- GANTI: tanggal & cerita -->
+  <ol class="garis">
+    <li class="an" style="--i:1"><b>30 September 2023</b><span>Pertama kali kita ketemu syuting film magrib</span></li>
+    <li class="an" style="--i:2"><b>1-30 oktober 2023</b><span>lagi pdktnya dan jadian </span></li>
+    <li class="an" style="--i:3"><b>19 november 2023</b><span>pertamakali kamu ke rumah aku</span></li>
+    <li class="an" style="--i:4"><b>26 november 2023</b><span>kita beli bolaa boluuu</span></li>
+    <li class="an" style="--i:5"><b>19 mei 2024</b><span>hari dimana aku menjadi laki laki paling bodoh</span></li>
+  </ol>
+</div></section>
+
+<!-- 4. Memory Gallery I: foto bisa digeser -->
+<section class="pg" id="p-meja" data-t="flip" data-j="Memory Gallery"><div class="isi">
+  <h2 class="judul an">Memory Gallery bisa skip aja kalo ga tertarik</h2><p class="sub an">seret fotonya, susun sesukamu · ketuk untuk memperbesar</p>
+  <div class="meja" data-noswipe>
+    <figure class="pl an jt" style="--x:4%;--y:2%;--r:-6deg;--i:1"><i class="tape"></i><div class="foto" data-nama="assets/images/foto1.jpg"><img src="assets/images/foto1.jpg" alt="Kenangan 1"></div><figcaption>Hari pertama kita kenal<small> 30 September 2023</small></figcaption></figure>
+    <figure class="pl an jt" style="--x:52%;--y:0%;--r:5deg;--i:2"><i class="klip"></i><div class="foto" data-nama="assets/images/foto2.jpg"><img src="assets/images/foto2.jpg" alt="Kenangan 2"></div><figcaption>aku yang fotoin kamu<small> 21 desember 2023</small></figcaption></figure>
+    <figure class="pl an jt" style="--x:22%;--y:44%;--r:-3deg;--i:3"><i class="tape krem"></i><div class="foto" data-nama="assets/images/foto3.jpg"><img src="assets/images/foto3.jpg" alt="Kenangan 3"></div><figcaption>foto kamu yang masih ada di aku<small> 20 Agustus 2022</small></figcaption></figure>
+    <figure class="pl an jt" style="--x:62%;--y:40%;--r:7deg;--i:4"><i class="tape"></i><div class="foto" data-nama="assets/images/foto4.jpg"><img src="assets/images/foto4.jpg" alt="Kenangan 4"></div><figcaption>ours maaf kalo gasuka<small></small></figcaption></figure>
+  </div>
+</div></section>
+
+<!-- 5. Cerita di balik foto: kartu bisa dibalik -->
+<section class="pg" id="p-kartu" data-t="tear" data-j="Cerita di Balik Foto"><div class="isi mid">
+  <h2 class="judul an">Cerita di Balik Foto</h2><p class="sub an">ketuk kartunya untuk membaliknya</p>
+  <div class="kartu3">
+    <div class="fc an" style="--r:-3deg;--i:1" role="button" tabindex="0"><div class="fc-in">
+      <div class="fc-d"><div class="foto" data-nama="assets/images/foto5.jpg"><img src="assets/images/foto5.jpg" alt="Kenangan 5"></div><p class="cap-k">Jepit Rambut</p></div>
+      <div class="fc-b"><p class="tulis">kamu masih ada jepit rambut kupu kupu warna biru favorit kamu itu ga yg se inget aku rusak,dan pas nyari gantinya gaada sekarang aku udah nemu loh jepi rambut kupu kupu yang kamu cari,kalo kamu pake cocok banget pasti </p></div></div></div>
+    <div class="fc an" style="--r:2deg;--i:2" role="button" tabindex="0"><div class="fc-in">
+      <div class="fc-d"><div class="foto" data-nama="assets/images/foto6.jpg"><img src="assets/images/foto6.jpg" alt="Kenangan 6"></div><p class="cap-k">bola bolu</p></div>
+      <div class="fc-b"><p class="tulis">kamu masih inget ga kelinci yang kita beli lalu di namain bola bolu, tahun lalu 2025 udaa banyak anaknya sampe akhirnya bola dan bolu harus wafat,kalo kamu masih inget terimakasih banyak yaaa</p></div></div></div>
+    <div class="fc an" style="--r:-1.5deg;--i:3" role="button" tabindex="0"><div class="fc-in">
+      <div class="fc-d"><div class="foto" data-nama="assets/images/foto3.jpg"><img src="assets/images/foto7.jpg" alt="Kenangan 7"></div><p class="cap-k">kucing</p></div>
+      <div class="fc-b"><p class="tulis">kamu masih suka kucing ga kak,sekarang banyak meme kucing yang lucu lucu sayang banget aku gabisa kirim ke kamu kamu harus liat pasti suka lucu banget soalnya</p></div></div></div>
+  </div>
+</div></section>
+
+<!-- 6. The Memories: catatan bisa dibuka -->
+<section class="pg" id="p-diary" data-t="peel" data-j="The Memories"><div class="isi mid">
+  <h2 class="judul an">The Memories</h2><p class="sub an">ketuk catatannya untuk membaca</p>
+  <div class="diary an" style="--i:1"><i class="klip"></i>
+    <div class="nota" style="--r:-3deg;--w:#d6e8f8" role="button" tabindex="0"><div class="nota-in"><div class="nd"><b>Tora</b><span>ketuk ♡</span></div><div class="nb">Tora apa kabar kak sehat sehat aja kan semoga selalu sehat yaa biar bisa nemenin kamu terus di kala sedih dan bahagia</div></div></div>
+    <div class="nota" style="--r:2deg;--w:#e0ecf9" role="button" tabindex="0"><div class="nota-in"><div class="nd"><b>farhan</b><span>ketuk ♡</span></div><div class="nb">kalo adik kamu gimana kak masih sering bandel ke kakanya ga? aku harap engga ya dan menjadi adik yang selalu suport kakanya biar menjadi kaka adik yang akrab</div></div></div>
+    <div class="nota" style="--r:1.5deg;--w:#cfe0ee" role="button" tabindex="0"><div class="nota-in"><div class="nd"><b>famlily</b><span>ketuk ♡</span></div><div class="nb">kalo keluarga kamu gimana? sehat semua kan ayah bunda nenek kakek om tante,semoga semua keluarga kamu selalu di beri kesehatan dan kebahagian selalu yaaa aaminn</div></div></div>
+    <div class="nota" style="--r:-2deg;--w:#dfe6ee" role="button" tabindex="0"><div class="nota-in"><div class="nd"><b>nara</b><span>ketuk ♡</span></div><div class="nb">kamu sendiri gimana kak? sehat kan baik baik aja,selalu bahagia apa masih suka bergadang atau malah sekarang ke asikan scroll drama drama cina atau scroll kucing ai apapun yang kamu lakukan semoga bisa bikin kamu bahagia yaa</div></div></div>
+  </div>
+</div></section>
+
+<!-- 7. Angka-angka -->
+<section class="pg" id="p-angka" data-t="zoom" data-j="Angka-angka Kecil"><div class="isi mid">
+  <h2 class="judul an">Angka-angka Kecil</h2><p class="sub an">yang diam-diam kuhitung</p>
+  <!-- tanggal mulai/selesai diatur di script.js (CONFIG) -->
+  <div class="angka-row">
+    <div class="tiket-angka an" style="--r:-2deg;--i:1"><b data-angka="1118">0</b><span>hari semenjak kita kenal</span></div>
+    <div class="tiket-angka an" style="--r:1.5deg;--i:2"><b data-angka="883">0</b><span>hari dari terakhir kita berbincang</span></div>
+    <div class="tiket-angka an" style="--r:-1deg;--i:3"><b data-angka="0">0</b><span>0</span></div>
+    <div class="tiket-angka an" style="--r:2deg;--i:4"><b data-angka="894">0</b><span>hari setelah aku nyia nyian kamu</span></div>
+  </div>
+</div></section>
+
+<!-- 8. Kartu gosok -->
+<section class="pg" id="p-gosok" data-t="slide" data-j="Kartu Gosok"><div class="isi mid">
+  <h2 class="judul an">Kartu Gosok</h2><p class="sub an">gosok dengan jari atau mouse ✨</p>
+  <div class="gosok an" data-noswipe style="--i:1">
+    <div class="rahasia"><p class="tulis">Di antara sekian banyak hal yang berubah, semoga ada satu hal yang selalu menetap yaitu kebahagiaan yang selalu menemukan jalannya kepadamu. Selamat bertambah usia kak</p></div>
+    <canvas id="kanvas"></canvas>
+  </div>
+</div></section>
+
+<!-- 9. Kuis -->
+<section class="pg" id="p-kuis" data-t="flip" data-j="tebak tebakan"><div class="isi mid">
+  <h2 class="judul an">coba tebak</h2><p class="sub an">kuis kecil, tanpa nilai yang salah</p>
+  <div id="kuis" class="an" style="--i:1"></div>
+</div></section>
+
+<!-- 10. Toples harapan -->
+<section class="pg" id="p-toples" data-t="dream" data-j="Toples Harapan"><div class="isi mid">
+  <h2 class="judul an">Toples Harapan</h2><p class="sub an">ambil satu, untukmu hari ini bisa di clik trus</p>
+  <svg id="jar" class="an" style="--i:1" viewBox="0 0 200 240" width="170"><g id="jarg">
+    <rect x="62" y="8" width="76" height="26" rx="6" fill="#5b7fa6"/>
+    <g><rect x="50" y="130" width="46" height="30" rx="3" fill="#e0ecf9" transform="rotate(-14 73 145)"/><rect x="92" y="150" width="50" height="30" rx="3" fill="#d6e8f8" transform="rotate(10 117 165)"/><rect x="58" y="168" width="48" height="30" rx="3" fill="#fbfdff" transform="rotate(6 82 183)"/><rect x="100" y="120" width="44" height="28" rx="3" fill="#cfe0ee" transform="rotate(-8 122 134)"/></g>
+    <path d="M52 34h96v18c22 10 26 30 26 62v90a22 22 0 0 1-22 22H48a22 22 0 0 1-22-22v-90c0-32 4-52 26-62z" fill="rgba(255,255,255,.35)" stroke="#5b7fa6" stroke-width="3"/>
+    <use href="#hati" x="86" y="86" width="28" height="28"/>
+  </g></svg>
+  <button class="tbl an" style="--i:2" id="ambil" type="button">Ambil satu harapan</button>
+  <div id="slip" class="tulis"></div>
+</div></section>
+
+<!-- 11. Lagu kita -->
+<section class="pg" id="p-lagu" data-t="tear" data-j="Lagu ROC"><div class="isi mid">
+  <h2 class="judul an">dengerin akhirnya kak hehe</h2><p class="sub an">putar, dan biarkan sebentar</p>
+  <div class="an" style="--i:1"><div class="piringan"></div></div>
+  <p class="judul-lagu an" style="--i:2" id="judulLagu"></p><p class="kecil an" style="--i:2" id="artisLagu"></p>
+  <div class="player an" style="--i:3">
+    <button id="pp" type="button" aria-label="Putar atau jeda">▶</button>
+    <input id="seek" type="range" min="0" max="100" value="0" aria-label="Posisi lagu"><span id="waktu">0:00</span>
+  </div>
+</div></section>
+
+<!-- 12. A Letter For You -->
+<section class="pg" id="p-surat" data-t="flip" data-j="A Letter For You"><div class="isi mid" id="isiSurat">
+  <div id="amplopWrap" class="an">
+    <button class="amplop" id="amplop" type="button" aria-label="Buka surat"><span class="flap"></span><span class="seal">♡</span><span class="untuk">untuk: Nama</span></button>
+    <p class="kecil" style="text-align:center;margin-top:30px">ketuk amplopnya</p>
+  </div>
+  <article id="suratBox"><i class="tape"></i><i class="washi w4"></i>
+    <h2 class="judul">A Letter For You</h2>
+    <!-- GANTI: isi surat. Satu <p> = satu paragraf -->
+    <p class="tulis par">Untuk kak finna,</p>
+    <p class="tulis par">Haii kak udah lama banget ya ga ngobrol, kamu apa kabar? baik baik aja kan,oh iya happy birth day yaa kak semoga panjang umur sehat selalu dan selalu di beri kebahagian semoga apa yang kamu ingin segera ter wujud aku pasti selalu mendoakan mu dimanapu aku berada bahagia selalu ya kak.</p>
+    <p class="tulis par">sebenernya banyak hal yang pengen aku sampaikan,tapi takut kepanjangan juga jadi maaf dan terimakasih kak, aku bersyukur pernah mengenalmu. Kamu mengajariku tentang sabar, tentang dewasa, dan tentang bagaimana cara kita nyayangin seseorang</p>
+    <p class="tulis par">banyak hal yang dulu kurang baik dariku, aku sangat sangat minta maaf. sampe detik inipun aku masih sangat ngerasa bersalah atas semua hal yang terjadi dengan kita sumpah demi apapun aku beneran nyesel kak maafin aku, semua yg terjadi emang pure kebodohan aku,aku sangat berharap kamu masih mau berbincang sama aku</p>
+    <p class="tulis par">Aku harap kamu bahagia, dikelilingi orang-orang yang menyayangimu, dan selalu punya alasan untuk tersenyum. dan aku harap kita masih bisa berbincang kak pls aku mohon dengan sangat pls pls pls </p>
+    <p class="tulis ttd par">Dengan hangat,<br>ayi taupik ikam</p>
+    <button class="tbl" id="tutupSurat" type="button">Lipat kembali</button>
+    <svg class="bunga kanan goyang"><use href="#bunga"/></svg>
+  </article>
+</div></section>
+
+<!-- 13. Thank You -->
+<section class="pg" id="p-terima" data-t="peel" data-j="Thank You"><div class="isi mid">
+  <h2 class="besar an">Terima kasih</h2><svg class="coret an" style="--i:1"><use href="#coret"/></svg>
+  <p class="sub an" style="--i:1">untuk semua yang pernah ada</p>
+  <ul class="strip">
+    <li class="an pp" style="--r:-3deg;--i:2">untuk tawa di hari-hari biasa</li>
+    <li class="an pp" style="--r:2deg;--i:3">untuk cerita yang pernah kita bagi</li>
+    <li class="an pp" style="--r:-1deg;--i:4">untuk sabar yang kamu ajarkan</li>
+    <li class="an pp" style="--r:3deg;--i:5">untuk pelajaran yang kubawa sampai sekarang</li>
+    <li class="an pp" style="--r:-2deg;--i:6">untuk kenangan yang tetap baik</li>
+  </ul>
+</div></section>
+
+<!-- 14. The Last Page -->
+<section class="pg" id="p-akhir" data-t="zoom" data-j="The Last Page"><div class="isi mid">
+  <div class="cap an pp"><span>THE END<br>• 2026 •</span></div>
+  <svg class="bunga-b goyang"><use href="#bunga"/></svg>
+  <p class="kalimat an" style="--i:2">Semoga kamu selalu baik-baik saja,<br>di mana pun kamu berada.</p>
+  <p class="selesai an" style="--i:4">That's all for now.</p>
+  <svg class="hati an pp" style="--i:6"><use href="#hati"/></svg>
+  <button class="tbl an" style="--i:7" id="awal" type="button">Baca dari awal</button>
+</div></section>
+
+</div>
+
+<!-- ===== Kontrol ===== -->
+<header class="atas">
+  <button class="bt" id="menu" type="button" aria-label="Daftar isi">☰</button>
+  <div class="kn">
+    <button class="bt lebar" id="musik" type="button" aria-label="Putar musik"><span class="not">♪</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+    <button class="bt" id="atur" type="button" aria-label="Pengaturan">⚙</button>
+  </div>
+</header>
+<footer class="bawah">
+  <button class="bt" id="prev" type="button" aria-label="Halaman sebelumnya">‹</button>
+  <div class="info"><span id="nomor">1 / 14</span><div class="bar"><i id="barisi"></i></div></div>
+  <button class="bt" id="next" type="button" aria-label="Halaman berikutnya">›</button>
+</footer>
+
+<aside id="panel">
+  <label>Volume musik <input id="vol" type="range" min="0" max="1" step=".05" value=".7"></label>
+  <label class="baris"><input id="sfx" type="checkbox" checked> Bunyi lembut saat pindah halaman</label>
+  <label class="baris"><input id="otomatis" type="checkbox"> Putar halaman otomatis</label>
+  <button class="tbl kecilb" id="penuh" type="button">Layar penuh</button>
+</aside>
+<div id="menuov"><div class="kartu-isi"><h2 class="judul">Daftar Isi</h2><ol class="toc" id="toc2"></ol></div></div>
+<div id="lb"><figure><img alt=""><figcaption></figcaption></figure></div>
+
+<audio id="lagu" src="assets/music/lagu.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
+S
